@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bouton_calcul">Calcul en italien</string>
+    <string name= "bouton_dernier_calcul"> dernier calcul en italien</string>
+</resources>
