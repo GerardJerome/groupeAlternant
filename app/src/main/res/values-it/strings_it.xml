@@ -2,4 +2,10 @@
 <resources>
     <string name="bouton_calcul">Calcul en italien</string>
     <string name= "bouton_dernier_calcul"> dernier calcul en italien</string>
+    <string name = "toolbar_nettoyer"> Nettoyer ! en italien</string>
+    <string name = "ERROR_TYPE_OPERATION"> Vous avez déjà un type d\'opération en italien </string>
+    <string name = "ERROR_VALUE_TOO_HIGH">Nombre trop grands ! en italien</string>
+    <string name="TOOLBAR_CALCUL"> Fais Le calcul ! en italien</string>
+
+
 </resources>

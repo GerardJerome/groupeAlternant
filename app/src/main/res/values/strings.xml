@@ -16,4 +16,8 @@
     <string name="bouton_7" translatable="false">7</string>
     <string name="bouton_8" translatable="false">8</string>
     <string name="bouton_9" translatable="false">9</string>
+    <string name="toolbar_nettoyer"> Nettoyer !</string>
+    <string name="ERROR_TYPE_OPERATION"> Vous avez déjà un type d\'opération</string>
+    <string name="ERROR_VALUE_TOO_HIGH">Nombre trop grands !</string>
+    <string name="TOOLBAR_CALCUL"> Fais Le calcul !</string>
 </resources>
