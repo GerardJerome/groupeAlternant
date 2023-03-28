@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.groupe_alternant.database.CalculBaseHelper;
+import com.example.groupe_alternant.database.CalculDao;
+import com.example.groupe_alternant.entities.Calcul;
+
 public class CalculActivity extends AppCompatActivity {
 
     private Integer premierElement = 0;
@@ -34,6 +38,8 @@ public class CalculActivity extends AppCompatActivity {
     private TextView textViewCalcul;
 
     private String calcul = "";
+
+    private CalculDao calculDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +89,8 @@ public class CalculActivity extends AppCompatActivity {
 
 
         textViewCalcul = findViewById(R.id.textViewCalcul);
+
+        calculDao = new CalculDao(new CalculBaseHelper(this,"BDD",1));
     }
 
     @Override
@@ -119,6 +127,12 @@ public class CalculActivity extends AppCompatActivity {
         intent.putExtra("DEUXIEME_ELEMENT",deuxiemeElement);
         intent.putExtra("RESULTAT",resultat);
         intent.putExtra("SYMBOL", typeOperation.getSymbol());
+        Calcul monCalcul = new Calcul();
+        monCalcul.setSymbol(typeOperation.getSymbol());
+        monCalcul.setPremierElement(premierElement);
+        monCalcul.setDeuxiemeElement(deuxiemeElement);
+        monCalcul.setResultat(resultat);
+        calculDao.create(monCalcul);
         startActivity(intent);
         return true;
     }

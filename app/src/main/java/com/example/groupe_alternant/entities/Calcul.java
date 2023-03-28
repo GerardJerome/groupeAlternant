@@ -1,17 +1,10 @@
 package com.example.groupe_alternant.entities;
 
-public class Calcul extends BaseEntity{
-    private Integer premierElement;
-    private Integer deuxiemeElement;
-    private Integer resultat;
-    private String symbole;
-
-    public Calcul(Integer premierElement, Integer deuxiemeElement, Integer resultat, String symbole) {
-        this.premierElement = premierElement;
-        this.deuxiemeElement = deuxiemeElement;
-        this.resultat = resultat;
-        this.symbole = symbole;
-    }
+public class Calcul  extends BaseEntity{
+    Integer premierElement;
+    Integer deuxiemeElement;
+    String symbol;
+    Integer resultat;
 
     public Calcul() {
     }
@@ -32,19 +25,19 @@ public class Calcul extends BaseEntity{
         this.deuxiemeElement = deuxiemeElement;
     }
 
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
     public Integer getResultat() {
         return resultat;
     }
 
     public void setResultat(Integer resultat) {
         this.resultat = resultat;
-    }
-
-    public String getSymbole() {
-        return symbole;
-    }
-
-    public void setSymbole(String symbole) {
-        this.symbole = symbole;
     }
 }
